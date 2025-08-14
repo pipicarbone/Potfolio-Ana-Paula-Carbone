@@ -30,7 +30,7 @@
     <!-- HERO -->
     <section class="bg-[url('img/fondohero.jpg')] bg-cover py-20">
       <section class="mt-30 max-w-6xl mx-auto mb-35 shadow-base">
-          <div class="flex justify-center items-center gap-20 bg-[#f9c5e3] py-15 rounded-4xl">
+          <div class="flex justify-center items-center gap-20 bg-[#f9c5e3] py-15 rounded-4xl animate__bounceIn">
               <img class="w-70 rounded-4xl transition-all duration-400 hover:scale-120 hover:shadow-[0_0_20px_#ff5bb2]" src="img/fotoperfil2.jpg" alt="">
 
               <div class="border-3 p-10 rounded-4xl border-[#ff289b] transition-all duration-400 hover:shadow-[0_0_20px_#ff5bb2] hover:bg-[url('img/fondocora.png')] hover:bg-cover">
@@ -122,53 +122,55 @@
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-12 items-center px-10">
+      <div class="grid md:grid-cols-2 gap-10 items-center px-10">
     
-      <div class="space-y-8">
-        <div class="flex items-center space-x-4 transition-transform duration-300 hover:scale-110">
-          <a href="mailto:anapaulacar05@gmail.com" target="_blank" class="flex items-center space-x-4">
-            <img src="img/iconoGmail.png" alt="Gmail">
-            <div>
-              <h3 class="font-semibold text-lg text-[#ff289b]">Email</h3>
-              <p class="text-[#f97cc3]">anapaulacar05@gmail.com</p>
-            </div>
-          </a>
+        <div class="space-y-8 ml-5">
+          <div class="flex items-center space-x-4 transition-transform duration-300 hover:scale-110">
+            <a href="mailto:anapaulacar05@gmail.com" target="_blank" class="flex items-center space-x-4">
+              <img src="img/iconoGmail.png" alt="Gmail">
+              <div>
+                <h3 class="font-semibold text-lg text-[#ff289b]">Email</h3>
+                <p class="text-[#f97cc3]">anapaulacar05@gmail.com</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="flex items-center space-x-4 transition-transform duration-300 hover:scale-110">
+            <a href="https://github.com/pipicarbone" target="_blank" class="flex items-center space-x-4">
+              <img src="img/iconoGithub2.png" alt="GitHub">
+              <div>
+                <h3 class="font-semibold text-lg text-[#ff289b]">GitHub</h3>
+                <p class="text-[#f97cc3]">pipicarbone</p>
+              </div>
+            </a>
+          </div>
         </div>
 
-      <div class="flex items-center space-x-4 transition-transform duration-300 hover:scale-110">
-        <a href="https://github.com/pipicarbone" target="_blank" class="flex items-center space-x-4">
-          <img src="img/iconoGithub2.png" alt="GitHub">
+        <form class="flex flex-col bg-[#ffcee6] text-gray-900 p-8 rounded-2xl shadow-lg space-y-6 max-w-2xl">
           <div>
-            <h3 class="font-semibold text-lg text-[#ff289b]">GitHub</h3>
-            <p class="text-[#f97cc3]">pipicarbone</p>
+            <label class="text-[#ff289b] mb-2 font-semibold text-lg" >Nombre</label>
+            <input class="w-full p-3 rounded-lg border border-[#f998cf]" type="text" placeholder="Tu nombre">
           </div>
-        </a>
+          <div>
+            <label class="text-[#ff289b] mb-2 font-semibold text-lg">Email</label>
+            <input class="w-full p-3 rounded-lg border border-[#f998cf]" type="email" placeholder="Tu correo">
+          </div>
+          <div>
+            <label class="text-[#ff289b] mb-2 font-semibold text-lg">Mensaje</label>
+            <textarea class="w-full p-3 rounded-lg border border-[#f998cf]" placeholder="Escribe tu mensaje"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-[#ff289b] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2] hover:bg-[#d32682] text-white font-bold py-3 rounded-lg transition">
+            Enviar
+          </button>
+        </form>
       </div>
-    </div>
-
-    <form class="flex flex-col bg-[#ffcee6] text-gray-900 p-8 rounded-2xl shadow-lg space-y-6 max-w-2xl">
-      <div>
-        <label class="text-[#ff289b] mb-2 font-semibold text-lg" >Nombre</label>
-        <input class="w-full p-3 rounded-lg border border-[#f998cf]" type="text" placeholder="Tu nombre">
-      </div>
-      <div>
-        <label class="text-[#ff289b] mb-2 font-semibold text-lg">Email</label>
-        <input class="w-full p-3 rounded-lg border border-[#f998cf]" type="email" placeholder="Tu correo">
-      </div>
-      <div>
-        <label class="text-[#ff289b] mb-2 font-semibold text-lg">Mensaje</label>
-        <textarea class="w-full p-3 rounded-lg border border-[#f998cf]" placeholder="Escribe tu mensaje"></textarea>
-      </div>
-      <button type="submit" class="w-full bg-[#ff289b] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2] hover:bg-[#d32682] text-white font-bold py-3 rounded-lg transition">
-        Enviar
-      </button>
-    </form>
-  </div>
 </section>
 
+<!-- FOOTER -->
+<footer class="py-4 bg-[#f9c5e3] shadow-md">
+  <p class="flex justify-center text-[#c63d8b]">&copy 2025. Todos los derechos reservados</p>
+</footer>
 
-    
-
-    <script src="js/app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
