@@ -15,13 +15,13 @@
 
 <body style="font-family: Roboto">
     <!-- HEADER -->
-    <header class="fixed top-0 left-0 w-full flex justify-between bg-[#f9c5e3] pl-5 shadow-md">
+    <header class="fixed z-50 top-0 left-0 w-full flex justify-between bg-[#f9c5e3] pl-5 shadow-md">
         <img class="w-90 h-18 mt-3 pl-2 transition-scale duration-300 hover:scale-103" src="img/Icono.png" alt="Icono">
         <nav class="p-8 text-white text-lg" text->
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="#Inicio">Inicio</a>
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Sobre Mi</a>
-            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mi Experiencia</a>
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mis Proyectos</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mi Experiencia</a>
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Contáctame</a>
         </nav>
 
@@ -44,9 +44,9 @@
     </section>
 
     <!-- PROYECTOS -->
-    <section class="bg-[#ffadd7] py-20">
+    <section class="bg-[#ffadd7] py-30">
       <h2 class="font-bold text-5xl text-center text-[#ff289b] mt-5">MIS PROYECTOS:</h2>
-      <div class="mt-20 relative w-[700px] h-[400px] overflow-hidden rounded-4xl border-4 border-[#ff289b] mx-auto mb-20">
+      <div class="mt-20 relative w-[700px] h-[400px] overflow-hidden rounded-4xl border-4 border-[#ff289b] mx-auto mb-20 shadow-[0_0_20px_#ff5bb2] transition-shadow duration-300 hover:shadow-[0_0_30px_#ff5bb2]">
         <div id="proyectos" class="flex transition-transform duration-500">
           <a href="https://github.com/pipicarbone/Mi-Presentacion" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
             <img src="img/trabajo1.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
@@ -71,7 +71,57 @@
       </div>
     </section>
 
-    
+    <!-- MI EXPERIENCIA -->
+    <section class="py-35 bg-[url('img/fondoExpe.jpg')] bg-cover">
+      <h3 class="font-bold text-5xl text-center text-[#ff289b] mt-5">MI EXPERIENCIA:</h3>
+      <div class="flex justify-between items-center max-w-6xl mx-auto gap-5 mt-10">
+        <div class="border-3 p-4 rounded-4xl border-[#ff289b] bg-[#ffcee6]">
+          <p class="text-justify text-2xl text-[#cc3f8a] max-w-3xl leading-relaxed">Tengo experiencia en desarrollo web y programación, tanto en la parte visual como en la lógica de las aplicaciones. En el frontend, trabajo con <span class="text-[#FF6D00] font-bold">HTML</span>,<span class="text-[#0277BD] font-bold"> CSS</span>, <span class="text-[#00ACC1] font-bold">Tailwind CSS</span> y <span class="text-[#0B090A] font-bold">JavaScript</span>, creando interfaces limpias, responsivas e interactivas. En el backend, tengo conocimientos de <span class="text-[#28AFE9] font-bold">C++</span>, programando la lógica y funcionalidad de aplicaciones. Para desarrollar y probar mis proyectos, utilizo <span class="text-[#29B6F6] font-bold">VS Code</span> como editor general y <span class="text-[#3BD23D] font-bold">Qt Creator</span> para aplicaciones con interfaz gráfica. Además, manejo <span class="text-[#000000] font-bold">Git</span> para el control de versiones y <span class="text-[#000000] font-bold">GitHub</span> para almacenar y compartir mis proyectos, facilitando la colaboración y el seguimiento de cambios.</p>
+        </div>
+        <div class="flex flex-col items-center gap-3">
+          <div class="border-3 p-2 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2]">
+            <h4 class="text-center font-bold text-[#ff289b] text-xl">Frontend</h4>
+            <div class="flex gap-2 justify-center">
+              <img src="img/iconoTilw.png" alt="">
+              <img src="img/iconoCss.png" alt="">
+              <img src="img/iconoHtml.png" alt="">
+              <img src="img/iconoJava.png" alt="">
+            </div>  
+          </div>
+          <div class="border-3 p-2 px-19 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2]">
+            <h4 class="text-center font-bold text-[#ff289b] text-xl">Backend</h4>
+            <div class="flex gap-2 justify-center">
+              <img src="img/iconoC++.png" alt="">
+            </div>
+          </div>
+          <div class="border-3 p-2 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2]">
+            <h4 class="text-center font-bold text-[#ff289b] text-xl">Entornos de desarrollo</h4>
+            <div class="flex gap-2 justify-center">
+              <img src="img/iconoQt.png" alt="">
+              <img src="img/iconoVscode.png" alt="">
+            </div>
+          </div>
+          <div class="border-3 p-2 px-4 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2]">
+            <h4 class="text-center font-bold text-[#ff289b] text-xl">Control de versiones</h4>
+            <div class="flex gap-2 justify-center">
+              <img src="img/iconoGit.png" alt="">
+              <img src="img/iconoGithub.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- CONTACTAME -->
+    <section>
+      <div>
+        <h5>¡Hablemos!</h5>
+        <p>Si tienes una idea, un proyecto o simplemente quieres saludar, envíame un mensaje.</p>
+      </div>
+
+
+    </section>
 
 
     
