@@ -11,122 +11,68 @@
 />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-<style>
-
-
-.list {
-  height: 200px;
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%,-50%)
-}
-
-.list li {
-  list-style-type: none;
-  
-  width: 200px;
-  height: 200px;
-  opacity: .25;
-  position: absolute;
-  left: 50%;
-  margin-left: -100px;
-  border-radius: 2px;
-  background: #9C89B8;
-  transition: transform 1s, opacity 1s;
-}
-
-.list .act {
-  opacity: 1;
-}
-
-.list .prev,
-.list .next {
-  cursor: pointer;
-}
-
-.list .prev {
-  transform: translateX(-220px) scale(.85);
-}
-
-.list .next {
-  transform: translateX(220px) scale(.85);
-}
-
-.list .hide {
-  transform: translateX(-420px) scale(.85);
-}
-
-.list .new-next {
-  transform: translateX(420px) scale(.85);
-}
-
-.list .hide,
-.list .new-next {
-  opacity: 0;
-  transition: opacity .5s, transform .5s;
-}
-
-.swipe {
-  width: 270px;
-  height: 200px;
-  position: absolute;
-  background-color: green;
-  border-radius: 2px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  opacity: 0;
-}
-</style>
-
-
-
-
 </head>
 
 <body style="font-family: Roboto">
     <!-- HEADER -->
-    <header class="flex justify-between bg-[#f9c5e3] pl-5">
+    <header class="fixed top-0 left-0 w-full flex justify-between bg-[#f9c5e3] pl-5 shadow-md">
         <img class="w-90 h-18 mt-3 pl-2 transition-scale duration-300 hover:scale-103" src="img/Icono.png" alt="Icono">
         <nav class="p-8 text-white text-lg" text->
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="#Inicio">Inicio</a>
-            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mis Proyectos</a>
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Sobre Mi</a>
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mi Experiencia</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mis Proyectos</a>
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Contáctame</a>
         </nav>
 
     </header>
 
     <!-- HERO -->
-    <section class="mt-30 max-w-6xl mx-auto">
-        <div class="flex justify-center items-center gap-20 bg-[#f9c5e3] py-15 rounded-4xl">
-            <img class="w-70 rounded-4xl transition-all duration-400 hover:scale-120 hover:shadow-[0_0_20px_#ff5bb2]" src="img/fotoperfil2.jpg" alt="">
+    <section class="bg-[url('img/fondohero.jpg')] bg-cover py-20">
+      <section class="mt-30 max-w-6xl mx-auto mb-35 shadow-base">
+          <div class="flex justify-center items-center gap-20 bg-[#f9c5e3] py-15 rounded-4xl">
+              <img class="w-70 rounded-4xl transition-all duration-400 hover:scale-120 hover:shadow-[0_0_20px_#ff5bb2]" src="img/fotoperfil2.jpg" alt="">
 
-            <div class="border-3 p-10 rounded-4xl border-[#ff289b] transition-all duration-400 hover:shadow-[0_0_20px_#ff5bb2] hover:bg-[url('img/fondocora.png')] hover:bg-cover">
-                <h1 class="font-mono text-6xl mb-5 text-center text-[#ff289b]">Ana Paula Carbone</h1>
-                <p class="font-bold mb-5 text-xl text-center text-[#ff56b0]">Desarrolladora Web Junior | Interesada en el diseño y la tecnología</p>
-                <p class="w-150 text-justify text-xl text-[#cc3f8a]">Soy una desarrolladora web, me especializo en construir experiencias digitales limpias y responsivas. Siempre buscando crecer profesionalmente y enfrentar nuevos desafíos en programación.</p>
-            </div>
-        </div>
-
+              <div class="border-3 p-10 rounded-4xl border-[#ff289b] transition-all duration-400 hover:shadow-[0_0_20px_#ff5bb2] hover:bg-[url('img/fondocora.png')] hover:bg-cover">
+                  <h1 class="font-mono text-6xl mb-5 text-center text-[#ff289b]">Ana Paula Carbone</h1>
+                  <p class="font-bold mb-5 text-xl text-center text-[#ff56b0]">Desarrolladora Web Junior | Interesada en el diseño y la tecnología</p>
+                  <p class="w-150 text-justify text-xl text-[#cc3f8a]">Soy una desarrolladora web, me especializo en construir experiencias digitales limpias y responsivas. Siempre buscando crecer profesionalmente y enfrentar nuevos desafíos en programación.</p>
+                  <nav class="text-center text-white text-xl"><a class="bg-[#ff289b] p-2 rounded-xl transition-shadow duration-400 hover:shadow-[0_0_20px_#ff5bb2]" href="#Contáctame">Enviame un Correo!</a></nav>
+                </div>
+          </div>
+      </section>
     </section>
 
-<!-- VEEEERRRR -->
-<section class="infinito">
-    <ul class="list">
-        <li class="hide"></li>
-        <li class="prev"></li>
-        <li class="act"></li>
-        <li class="next"></li>
-        <li class="next new-next"></li>
-    </ul>
+    <!-- PROYECTOS -->
+    <section class="bg-[#ffadd7] py-20">
+      <h2 class="font-bold text-5xl text-center text-[#ff289b] mt-5">MIS PROYECTOS:</h2>
+      <div class="mt-20 relative w-[700px] h-[400px] overflow-hidden rounded-4xl border-4 border-[#ff289b] mx-auto mb-20">
+        <div id="proyectos" class="flex transition-transform duration-500">
+          <a href="https://github.com/pipicarbone/Mi-Presentacion" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
+            <img src="img/trabajo1.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+          </a>
+          <a href="https://github.com/pipicarbone/Menu-Digital" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
+            <img src="img/trabajo2.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+          </a>
+          <a href="https://github.com/pipicarbone/tp3-flexbox-clon" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
+            <img src="img/trabajo3.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+          </a>
+          <a href="https://github.com/GoriliGorili/TPoo-Ano2" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
+            <img src="img/trabajo4.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+          </a>
+        </div>
 
-    <div class="swipe"></div>
+        <button onclick="moverPlantilla(-1)" class="absolute top-1/2 left-2 -translate-y-1/2 bg-white/70 rounded-full p-2 hover:bg-white">
+          ◀
+        </button>
+        <button onclick="moverPlantilla(1)" class="absolute top-1/2 right-2 -translate-y-1/2 bg-white/70 rounded-full p-2 hover:bg-white">
+          ▶
+        </button>
+      </div>
+    </section>
 
-    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
- </section>
+    
+
 
     
 
