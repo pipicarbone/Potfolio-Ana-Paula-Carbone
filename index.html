@@ -49,16 +49,16 @@
       <div class="mt-20 relative w-[700px] h-[400px] overflow-hidden rounded-4xl border-4 border-[#ff289b] mx-auto mb-20 shadow-[0_0_20px_#ff5bb2] transition-shadow duration-300 hover:shadow-[0_0_30px_#ff5bb2]">
         <div id="proyectos" class="flex transition-transform duration-500">
           <a href="https://github.com/pipicarbone/Mi-Presentacion" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
-            <img src="img/trabajo1.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="img/trabajo1.jpg" />
           </a>
           <a href="https://github.com/pipicarbone/Menu-Digital" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
-            <img src="img/trabajo2.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="img/trabajo2.jpg"/>
           </a>
           <a href="https://github.com/pipicarbone/tp3-flexbox-clon" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
-            <img src="img/trabajo3.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="img/trabajo3.jpg"/>
           </a>
           <a href="https://github.com/GoriliGorili/TPoo-Ano2" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
-            <img src="img/trabajo4.jpg" class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" />
+            <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="img/trabajo4.jpg"/>
           </a>
         </div>
 
@@ -114,14 +114,57 @@
     </section>
 
     <!-- CONTACTAME -->
-    <section>
-      <div>
-        <h5>¡Hablemos!</h5>
-        <p>Si tienes una idea, un proyecto o simplemente quieres saludar, envíame un mensaje.</p>
+    <section class="py-20 bg-[#ffadd7]">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4 text-[#ff289b]">¡Hablemos!</h2>
+        <p class="text-2xl text-[#ffd8ee]">
+          Si tienes una idea, un proyecto o simplemente queres saludar, enviame un mensaje.
+        </p>
       </div>
 
+      <div class="grid md:grid-cols-2 gap-12 items-center px-10">
+    
+      <div class="space-y-8">
+        <div class="flex items-center space-x-4 transition-transform duration-300 hover:scale-110">
+          <a href="mailto:anapaulacar05@gmail.com" target="_blank" class="flex items-center space-x-4">
+            <img src="img/iconoGmail.png" alt="Gmail">
+            <div>
+              <h3 class="font-semibold text-lg text-[#ff289b]">Email</h3>
+              <p class="text-[#f97cc3]">anapaulacar05@gmail.com</p>
+            </div>
+          </a>
+        </div>
 
-    </section>
+      <div class="flex items-center space-x-4 transition-transform duration-300 hover:scale-110">
+        <a href="https://github.com/pipicarbone" target="_blank" class="flex items-center space-x-4">
+          <img src="img/iconoGithub2.png" alt="GitHub">
+          <div>
+            <h3 class="font-semibold text-lg text-[#ff289b]">GitHub</h3>
+            <p class="text-[#f97cc3]">pipicarbone</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <form class="flex flex-col bg-[#ffcee6] text-gray-900 p-8 rounded-2xl shadow-lg space-y-6 max-w-2xl">
+      <div>
+        <label class="text-[#ff289b] mb-2 font-semibold text-lg" >Nombre</label>
+        <input class="w-full p-3 rounded-lg border border-[#f998cf]" type="text" placeholder="Tu nombre">
+      </div>
+      <div>
+        <label class="text-[#ff289b] mb-2 font-semibold text-lg">Email</label>
+        <input class="w-full p-3 rounded-lg border border-[#f998cf]" type="email" placeholder="Tu correo">
+      </div>
+      <div>
+        <label class="text-[#ff289b] mb-2 font-semibold text-lg">Mensaje</label>
+        <textarea class="w-full p-3 rounded-lg border border-[#f998cf]" placeholder="Escribe tu mensaje"></textarea>
+      </div>
+      <button type="submit" class="w-full bg-[#ff289b] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2] hover:bg-[#d32682] text-white font-bold py-3 rounded-lg transition">
+        Enviar
+      </button>
+    </form>
+  </div>
+</section>
 
 
     
