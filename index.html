@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Ana Paula Carbone</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+
+
+.list {
+  height: 200px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,-50%)
+}
+
+.list li {
+  list-style-type: none;
+  
+  width: 200px;
+  height: 200px;
+  opacity: .25;
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  border-radius: 2px;
+  background: #9C89B8;
+  transition: transform 1s, opacity 1s;
+}
+
+.list .act {
+  opacity: 1;
+}
+
+.list .prev,
+.list .next {
+  cursor: pointer;
+}
+
+.list .prev {
+  transform: translateX(-220px) scale(.85);
+}
+
+.list .next {
+  transform: translateX(220px) scale(.85);
+}
+
+.list .hide {
+  transform: translateX(-420px) scale(.85);
+}
+
+.list .new-next {
+  transform: translateX(420px) scale(.85);
+}
+
+.list .hide,
+.list .new-next {
+  opacity: 0;
+  transition: opacity .5s, transform .5s;
+}
+
+.swipe {
+  width: 270px;
+  height: 200px;
+  position: absolute;
+  background-color: green;
+  border-radius: 2px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0;
+}
+</style>
+
+
+
+
+</head>
+
+<body style="font-family: Roboto">
+    <!-- HEADER -->
+    <header class="flex justify-between bg-[#f9c5e3] pl-5">
+        <img class="w-90 h-18 mt-3 pl-2 transition-scale duration-300 hover:scale-103" src="img/Icono.png" alt="Icono">
+        <nav class="p-8 text-white text-lg" text->
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="#Inicio">Inicio</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mis Proyectos</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Sobre Mi</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mi Experiencia</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Contáctame</a>
+        </nav>
+
+    </header>
+
+    <!-- HERO -->
+    <section class="mt-30 max-w-6xl mx-auto">
+        <div class="flex justify-center items-center gap-20 bg-[#f9c5e3] py-15 rounded-4xl">
+            <img class="w-70 rounded-4xl transition-all duration-400 hover:scale-120 hover:shadow-[0_0_20px_#ff5bb2]" src="img/fotoperfil2.jpg" alt="">
+
+            <div class="border-3 p-10 rounded-4xl border-[#ff289b] transition-all duration-400 hover:shadow-[0_0_20px_#ff5bb2] hover:bg-[url('img/fondocora.png')] hover:bg-cover">
+                <h1 class="font-mono text-6xl mb-5 text-center text-[#ff289b]">Ana Paula Carbone</h1>
+                <p class="font-bold mb-5 text-xl text-center text-[#ff56b0]">Desarrolladora Web Junior | Interesada en el diseño y la tecnología</p>
+                <p class="w-150 text-justify text-xl text-[#cc3f8a]">Soy una desarrolladora web, me especializo en construir experiencias digitales limpias y responsivas. Siempre buscando crecer profesionalmente y enfrentar nuevos desafíos en programación.</p>
+            </div>
+        </div>
+
+    </section>
+
+<!-- VEEEERRRR -->
+<section class="infinito">
+    <ul class="list">
+        <li class="hide"></li>
+        <li class="prev"></li>
+        <li class="act"></li>
+        <li class="next"></li>
+        <li class="next new-next"></li>
+    </ul>
+
+    <div class="swipe"></div>
+
+    <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+ </section>
+
+    
+
+    <script src="js/app.js"></script>
+</body>
+</html>
