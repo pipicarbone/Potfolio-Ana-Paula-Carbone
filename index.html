@@ -11,53 +11,60 @@
 />
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            /* CAMBIO: Se agrega el comportamiento de scroll suave a todo el documento */
+            scroll-behavior: smooth;
+        }
+    </style>
+
 </head>
 
-<body style="font-family: Roboto">
+<body>
     <!-- HEADER -->
-    <header class="fixed z-50 top-0 left-0 w-full flex justify-between bg-[#f9c5e3] pl-5 shadow-md">
-        <img class="w-90 h-18 mt-3 pl-2 transition-scale duration-300 hover:scale-103" src="img/Icono.png" alt="Icono">
-        <nav class="p-8 text-white text-lg" text->
+    <header class="fixed z-50 top-0 left-0 w-full flex flex-col md:flex-row items-center justify-between bg-[#f9c5e3] p-4 shadow-md">
+        <img class="w-90  h-18 mt-3 pl-2 transition-scale duration-300 hover:scale-103 md:mb-0" src="img/Icono.png" alt="Icono">
+        <nav class="flex flex-wrap justify-center md:justify-end text-white text-base md:text-lg gap-2" text->
             <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="#Inicio">Inicio</a>
-            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Sobre Mi</a>
-            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mis Proyectos</a>
-            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Mi Experiencia</a>
-            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="">Contáctame</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="#MisProyectos">Mis Proyectos</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="#MiExperiencia">Mi Experiencia</a>
+            <a class="mr-10 bg-[#F4A2D4] p-3 rounded-xl transition-shadow duration-200 hover:shadow-[0_0_15px_#ff5bb2]" href="#Contactame">Contáctame</a>
         </nav>
 
     </header>
 
     <!-- HERO -->
-    <section class="bg-[url('img/fondohero.jpg')] bg-cover py-20">
+    <section  id="Inicio" class="bg-[url('img/fondohero.jpg')] bg-cover bg-cover pt-32 pb-20 px-4 md:px-10 lg:px-20">
       <section class="mt-30 max-w-6xl mx-auto mb-35 shadow-base">
-          <div class="flex justify-center items-center gap-20 bg-[#f9c5e3] py-15 rounded-4xl animate__bounceIn">
-              <img class="w-70 rounded-4xl transition-all duration-400 hover:scale-120 hover:shadow-[0_0_20px_#ff5bb2]" src="img/fotoperfil2.jpg" alt="">
+          <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-20 bg-[#f9c5e3] py-10 md:py-16 rounded-4xl animate__bounceIn">
+              <img class="w-48 md:w-72 rounded-4xl transition-all duration-400 hover:scale-120 hover:shadow-[0_0_20px_#ff5bb2]" src="img/fotoperfil2.jpg" alt="">
 
               <div class="border-3 p-10 rounded-4xl border-[#ff289b] transition-all duration-400 hover:shadow-[0_0_20px_#ff5bb2] hover:bg-[url('img/fondocora.png')] hover:bg-cover">
-                  <h1 class="font-mono text-6xl mb-5 text-center text-[#ff289b]">Ana Paula Carbone</h1>
+                  <h1 class="font-mono text-4xl md:text-6xl mb-3 md:mb-5 text-center text-[#ff289b]">Ana Paula Carbone</h1>
                   <p class="font-bold mb-5 text-xl text-center text-[#ff56b0]">Desarrolladora Web Junior | Interesada en el diseño y la tecnología</p>
-                  <p class="w-150 text-justify text-xl text-[#cc3f8a]">Soy una desarrolladora web, me especializo en construir experiencias digitales limpias y responsivas. Siempre buscando crecer profesionalmente y enfrentar nuevos desafíos en programación.</p>
-                  <nav class="text-center text-white text-xl"><a class="bg-[#ff289b] p-2 rounded-xl transition-shadow duration-400 hover:shadow-[0_0_20px_#ff5bb2]" href="#Contáctame">Enviame un Correo!</a></nav>
+                  <p class="max-w-prose text-justify text-base md:text-xl text-[#cc3f8a] mb-2">Soy una desarrolladora web, me especializo en construir experiencias digitales limpias y responsivas. Siempre buscando crecer profesionalmente y enfrentar nuevos desafíos en programación.</p>
+                  <nav class="text-center text-white text-xl"><a class="bg-[#ff289b] p-2 rounded-xl transition-shadow duration-400 hover:shadow-[0_0_20px_#ff5bb2]" href="#Contactame">Enviame un Correo!</a></nav>
                 </div>
           </div>
       </section>
     </section>
 
     <!-- PROYECTOS -->
-    <section class="bg-[#ffadd7] py-30">
-      <h2 class="font-bold text-5xl text-center text-[#ff289b] mt-5">MIS PROYECTOS:</h2>
+    <section id="MisProyectos" class="bg-[#ffadd7] py-30">
+      <h2 class="font-bold text-3xl md:text-5xl text-center text-[#ff289b] mb-10">MIS PROYECTOS:</h2>
       <div class="mt-20 relative w-[700px] h-[400px] overflow-hidden rounded-4xl border-4 border-[#ff289b] mx-auto mb-20 shadow-[0_0_20px_#ff5bb2] transition-shadow duration-300 hover:shadow-[0_0_30px_#ff5bb2]">
         <div id="proyectos" class="flex transition-transform duration-500">
-          <a href="https://github.com/pipicarbone/Mi-Presentacion" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
+          <a href="https://github.com/pipicarbone/Mi-Presentacion" target="_blank" class="w-full h-full flex-shrink-0 overflow-hidden">
             <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="img/trabajo1.jpg" />
           </a>
-          <a href="https://github.com/pipicarbone/Menu-Digital" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
+          <a href="https://github.com/pipicarbone/Menu-Digital" target="_blank" class="w-full h-full flex-shrink-0 overflow-hidden">
             <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="img/trabajo2.jpg"/>
           </a>
-          <a href="https://github.com/pipicarbone/tp3-flexbox-clon" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
+          <a href="https://github.com/pipicarbone/tp3-flexbox-clon" target="_blank" class="w-full h-full flex-shrink-0 overflow-hidden">
             <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="img/trabajo3.jpg"/>
           </a>
-          <a href="https://github.com/GoriliGorili/TPoo-Ano2" target="_blank" class="w-[700px] h-[400px] flex-shrink-0 overflow-hidden">
+          <a href="https://github.com/GoriliGorili/TPoo-Ano2" target="_blank" class="w-full h-full flex-shrink-0 overflow-hidden">
             <img class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" src="img/trabajo4.jpg"/>
           </a>
         </div>
@@ -72,36 +79,36 @@
     </section>
 
     <!-- MI EXPERIENCIA -->
-    <section class="py-35 bg-[url('img/fondoExpe.jpg')] bg-cover">
-      <h3 class="font-bold text-5xl text-center text-[#ff289b] mt-5">MI EXPERIENCIA:</h3>
-      <div class="flex justify-between items-center max-w-6xl mx-auto gap-5 mt-10">
-        <div class="border-3 p-4 rounded-4xl border-[#ff289b] bg-[#ffcee6]">
-          <p class="text-justify text-2xl text-[#cc3f8a] max-w-3xl leading-relaxed">Tengo experiencia en desarrollo web y programación, tanto en la parte visual como en la lógica de las aplicaciones. En el frontend, trabajo con <span class="text-[#FF6D00] font-bold">HTML</span>,<span class="text-[#0277BD] font-bold"> CSS</span>, <span class="text-[#00ACC1] font-bold">Tailwind CSS</span> y <span class="text-[#0B090A] font-bold">JavaScript</span>, creando interfaces limpias, responsivas e interactivas. En el backend, tengo conocimientos de <span class="text-[#28AFE9] font-bold">C++</span>, programando la lógica y funcionalidad de aplicaciones. Para desarrollar y probar mis proyectos, utilizo <span class="text-[#29B6F6] font-bold">VS Code</span> como editor general y <span class="text-[#3BD23D] font-bold">Qt Creator</span> para aplicaciones con interfaz gráfica. Además, manejo <span class="text-[#000000] font-bold">Git</span> para el control de versiones y <span class="text-[#000000] font-bold">GitHub</span> para almacenar y compartir mis proyectos, facilitando la colaboración y el seguimiento de cambios.</p>
+    <section id="MiExperiencia" class="py-20 px-4 bg-[url('img/fondoExpe.jpg')] bg-cover">
+      <h3 class="font-bold text-3xl md:text-5xl text-center text-[#ff289b] mb-10">MI EXPERIENCIA:</h3>
+      <div class="flex flex-col md:flex-row justify-between items-center max-w-6xl mx-auto gap-8 mt-10">
+        <div class="border-3 p-4 rounded-4xl border-[#ff289b] bg-[#ffcee6] w-full">
+          <p class="text-justify text-lg md:text-2xl text-[#cc3f8a] leading-relaxed px-2">Tengo experiencia en desarrollo web y programación, tanto en la parte visual como en la lógica de las aplicaciones. En el frontend, trabajo con <span class="text-[#FF6D00] font-bold">HTML</span>,<span class="text-[#0277BD] font-bold"> CSS</span>, <span class="text-[#00ACC1] font-bold">Tailwind CSS</span> y <span class="text-[#0B090A] font-bold">JavaScript</span>, creando interfaces limpias, responsivas e interactivas. En el backend, tengo conocimientos de <span class="text-[#28AFE9] font-bold">C++</span>, programando la lógica y funcionalidad de aplicaciones. Para desarrollar y probar mis proyectos, utilizo <span class="text-[#29B6F6] font-bold">VS Code</span> como editor general y <span class="text-[#3BD23D] font-bold">Qt Creator</span> para aplicaciones con interfaz gráfica. Además, manejo <span class="text-[#000000] font-bold">Git</span> para el control de versiones y <span class="text-[#000000] font-bold">GitHub</span> para almacenar y compartir mis proyectos, facilitando la colaboración y el seguimiento de cambios.</p>
         </div>
-        <div class="flex flex-col items-center gap-3">
+        <div class="flex flex-col items-center gap-3 w-full md:w-auto mt-8 md:mt-0">
           <div class="border-3 p-2 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2]">
             <h4 class="text-center font-bold text-[#ff289b] text-xl">Frontend</h4>
-            <div class="flex gap-2 justify-center">
+            <div class="flex flex-wrap gap-2 justify-center">
               <img src="img/iconoTilw.png" alt="">
               <img src="img/iconoCss.png" alt="">
               <img src="img/iconoHtml.png" alt="">
               <img src="img/iconoJava.png" alt="">
             </div>  
           </div>
-          <div class="border-3 p-2 px-19 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2]">
+          <div class="border-3 p-2 px-8 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2] w-full">
             <h4 class="text-center font-bold text-[#ff289b] text-xl">Backend</h4>
             <div class="flex gap-2 justify-center">
               <img src="img/iconoC++.png" alt="">
             </div>
           </div>
-          <div class="border-3 p-2 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2]">
+          <div class="border-3 p-2 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2] w-full">
             <h4 class="text-center font-bold text-[#ff289b] text-xl">Entornos de desarrollo</h4>
             <div class="flex gap-2 justify-center">
               <img src="img/iconoQt.png" alt="">
               <img src="img/iconoVscode.png" alt="">
             </div>
           </div>
-          <div class="border-3 p-2 px-4 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2]">
+          <div class="border-3 p-2 px-4 rounded-4xl border-[#ff289b] bg-[#ffcee6] transition-all duration-300 hover:shadow-[0_0_20px_#ff5bb2] w-full">
             <h4 class="text-center font-bold text-[#ff289b] text-xl">Control de versiones</h4>
             <div class="flex gap-2 justify-center">
               <img src="img/iconoGit.png" alt="">
@@ -114,17 +121,17 @@
     </section>
 
     <!-- CONTACTAME -->
-    <section class="py-20 bg-[#ffadd7]">
+    <section id="Contactame" class="py-16 px-4 bg-[#ffadd7]">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4 text-[#ff289b]">¡Hablemos!</h2>
-        <p class="text-2xl text-[#ffd8ee]">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[#ff289b]">¡Hablemos!</h2>
+        <p class="text-lg md:text-2xl text-[#ffd8ee]">
           Si tienes una idea, un proyecto o simplemente queres saludar, enviame un mensaje.
         </p>
       </div>
 
-      <div class="grid md:grid-cols-2 gap-10 items-center px-10">
+      <div class="grid md:grid-cols-2 gap-10 items-center px-4 md:px-10">
     
-        <div class="space-y-8 ml-5">
+        <div class="space-y-6 md:space-y-8 px-4 mt-8 md:mt-0">
           <div class="flex items-center space-x-4 transition-transform duration-300 hover:scale-110">
             <a href="mailto:anapaulacar05@gmail.com" target="_blank" class="flex items-center space-x-4">
               <img src="img/iconoGmail.png" alt="Gmail">
@@ -141,6 +148,16 @@
               <div>
                 <h3 class="font-semibold text-lg text-[#ff289b]">GitHub</h3>
                 <p class="text-[#f97cc3]">pipicarbone</p>
+              </div>
+            </a>
+          </div>
+
+           <div class="flex items-center space-x-4 transition-transform duration-300 hover:scale-110">
+            <a href="https://www.linkedin.com/in/ana-paula-undefined-a3382b37a/" target="_blank" class="flex items-center space-x-4">
+              <img src="img/iconoLink.png" alt="LinkedIn">
+              <div>
+                <h3 class="font-semibold text-lg text-[#ff289b]">LinkedIn</h3>
+                <p class="text-[#f97cc3]">Ana Paula</p>
               </div>
             </a>
           </div>
